@@ -1,2 +1,0 @@
-Django==1.9.5
-inflection==0.3.1
