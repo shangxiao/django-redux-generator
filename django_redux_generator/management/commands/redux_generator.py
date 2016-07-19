@@ -19,6 +19,6 @@ class Command(BaseCommand):
         else:
             template_name = 'django_redux_generator/action_creator.js'
 
-        print(render_to_string(template_name, {
+        return render_to_string(template_name, {
             'action_name': options['action_name'],
-        }))
+        })
