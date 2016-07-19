@@ -14,7 +14,7 @@ function receive{{action_name}}(data) {
     };
 }
 
-export function get{{action_name}}() {
+export function {{action_name}}() {
     return (dispatch) => {
         dispatch(request{{action_name}}());
         fetch('/url')
