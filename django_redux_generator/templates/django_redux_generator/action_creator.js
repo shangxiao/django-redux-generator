@@ -1,7 +1,7 @@
-const {{action_name_upper}} = '{{action_name_upper}}';
+{% load redux_generator %}const {{action_name|upper}} = '{{action_name|upper}}';
 
-export function {{action_name}}() {
+export function {{action_name|camelize:False}}() {
   return {
-    type: {{action_name_upper}},
+    type: {{action_name|upper}},
   };
 }

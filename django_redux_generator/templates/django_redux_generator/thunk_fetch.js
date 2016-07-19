@@ -1,24 +1,24 @@
-const REQUEST_{{action_name_upper}} = 'REQUEST_{{action_name_upper}}';
-const RECEIVE_{{action_name_upper}} = 'RECEIVE_{{action_name_upper}}';
+{% load redux_generator %}const REQUEST_{{action_name|upper}} = 'REQUEST_{{action_name|upper}}';
+const RECEIVE_{{action_name|upper}} = 'RECEIVE_{{action_name|upper}}';
 
-function request{{action_name}}() {
+function request{{action_name|camelize}}() {
     return {
-        type: REQUEST_{{action_name_upper}},
+        type: REQUEST_{{action_name|upper}},
     };
 }
 
-function receive{{action_name}}(data) {
+function receive{{action_name|camelize}}(data) {
     return {
-        type: RECEIVE_{{action_name_upper}},
+        type: RECEIVE_{{action_name|upper}},
         data,
     };
 }
 
-export function {{action_name}}() {
+export function {{action_name|camelize:False}}() {
     return (dispatch) => {
-        dispatch(request{{action_name}}());
+        dispatch(request{{action_name|camelize}}());
         fetch('/url')
             .then(response => response.json())
-            .then(data => dispatch(receive{{action_name}}(data)));
+            .then(data => dispatch(receive{{action_name|camelize}}(data)));
     };
 }
