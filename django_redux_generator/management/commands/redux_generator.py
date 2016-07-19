@@ -8,10 +8,10 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('action_name', type=str)
         parser.add_argument('--thunk',
-            action='store_true',
-            dest='thunk',
-            default=False,
-            help='Generate a redux thunk')
+                            action='store_true',
+                            dest='thunk',
+                            default=False,
+                            help='Generate a redux thunk')
 
     def handle(self, *args, **options):
         if options['thunk']:
