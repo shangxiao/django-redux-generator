@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-redux-generator',
-    version='0.1.1',
+    version='0.2.0',
     description='Generate redux boilerplate',
     author='David Sanders',
     author_email='dsanders@rapilabs.com',
